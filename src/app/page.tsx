@@ -148,8 +148,8 @@ const Hero = ({}) => {
                 John
               </h1>
               <p className="text-gray-700 font-medium animate-fade-in">
-                I'm an experienced software and web engineer with a passion for
-                implementing high quality designs using the latest frontend
+                I&apos;m an experienced software and web engineer with a passion
+                for implementing high quality designs using the latest frontend
                 technologies.
               </p>
               <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2">
@@ -537,7 +537,7 @@ const Experience = ({}) => {
             Some of my most notable experiences are laid out below in these
             cards. From personal projects, to agency experience, to long term
             maintenance of notable web properties from a reputable software
-            company, I've done it all.
+            company, I&apos;ve done it all.
           </p>
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
