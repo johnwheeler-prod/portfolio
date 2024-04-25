@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 140deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      hammersmith: ["Hammersmith One", "sans-serif"],
+    },
     keyframes: {
       float: {
         "0%": { transform: "translateY(0%) translateX(0%)" },
