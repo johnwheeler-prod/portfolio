@@ -15,38 +15,41 @@ const config: Config = {
       },
     },
     keyframes: {
-      wipe: {
+      float: {
         "0%": { transform: "translateY(0%) translateX(0%)" },
-        "50%": { transform: "translateY(90%) translateX(-1%) scale(1.015)" },
+        "33%": { transform: "translateY(26%) translateX(-12%)" },
+        "50%": { transform: "translateY(39%) translateX(-6%) scale(1.015)" },
+        "86%": { transform: "translateY(39%) translateX(-6%) scale(1.034)" },
         "100%": { transform: "translateY(0%) translateX(0%)" },
       },
-      "wipe-2": {
+      "float-1": {
         "0%": { transform: "translateY(0%) translateX(0%)" },
-        "50%": { transform: "translateY(180%) translateX(-2%) scale(1.03)" },
-        "100%": { transform: "translateY(-0%) translateX(0%)" },
+        "15%": { transform: "translateY(-12%) translateX(9%)" },
+        "33%": { transform: "translateY(-19%) translateX(12%) scale(1.015)" },
+        "52%": { transform: "translateY(-4%) translateX(18%) scale(1.034)" },
+        "86%": { transform: "translateY(-1%) translateX(6%) scale(1.01)" },
+        "100%": { transform: "translateY(0%) translateX(0%)" },
       },
-      "wipe-3": {
+      "float-2": {
         "0%": { transform: "translateY(0%) translateX(0%)" },
-        "50%": { transform: "translateY(270%) translateX(-3.5%) scale(1.065)" },
-        "100%": { transform: "translateY(0%) translateX(0%)", display: "none" },
+        "25%": { transform: "translateY(6%) translateX(-20%)" },
+        "50%": { transform: "translateY(39%) translateX(-32%) scale(1.015)" },
+        "75%": { transform: "translateY(39%) translateX(-18%) scale(1.034)" },
+        "100%": { transform: "translateY(0%) translateX(0%)" },
       },
-      "fade-in": {
-        "0%": { opacity: "0" },
-        "92%": { opacity: "0" },
-        "100%": { opacity: "1" },
-      },
-      "fade-in-2": {
-        "0%": { opacity: "0" },
-        "90%": { opacity: "0" },
-        "100%": { opacity: "1" },
+      "float-3": {
+        "0%": { transform: "translateY(0%) translateX(0%)" },
+        "25%": { transform: "translateY(6%) translateX(-2%)" },
+        "50%": { transform: "translateY(39%) translateX(-4%) scale(1.015)" },
+        "75%": { transform: "translateY(-18%) translateX(-1%) scale(1.034)" },
+        "100%": { transform: "translateY(0%) translateX(0%)" },
       },
     },
     animation: {
-      "wipe-text": "wipe 2.4s cubic-bezier(.62,.28,.23,.99)",
-      "wipe-text-2": "wipe-2 2.4s cubic-bezier(.62,.28,.23,.99)",
-      "wipe-text-3": "wipe-3 2.4s cubic-bezier(.62,.28,.23,.99)",
-      "fade-in": "fade-in 2s cubic-bezier(.62,.28,.23,.99)",
-      "fade-in-2": "fade-in-2 2s cubic-bezier(.62,.28,.23,.99)",
+      float: "float 5.7s cubic-bezier(.62,.28,.23,.99) infinite",
+      "float-1": "float-1 9.1s ease-in-out infinite",
+      "float-2": "float-2 7.2s cubic-bezier(.62,.28,.23,.99) infinite",
+      "float-3": "float-2 7.2s EASE-IN-OUT infinite",
     },
   },
   plugins: [],
