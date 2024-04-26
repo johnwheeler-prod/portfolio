@@ -613,7 +613,7 @@ const Experience = ({}) => {
 
 const Footer = ({}) => {
   return (
-    <section className="px-4 py-[11rem]" id="connect">
+    <section className="px-4 py-[11rem] flex justify-center" id="connect">
       <div className="container flex flex-col justify-center items-center text-center relative">
         <div className="absolute bottom-[-80%] right-1/3">
           <svg
