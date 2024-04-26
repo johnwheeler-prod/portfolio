@@ -13,7 +13,7 @@ export default function Home() {
 
 const Nav = ({}) => {
   return (
-    <nav className="w-full flex justify-center fixed top-0 py-8 px-4 z-50 bg-white/10 shadow-sm ring-1 ring-black/5 backdrop-blur-md">
+    <nav className="w-full flex justify-center fixed top-0 py-6 px-4 z-50 bg-white/10 shadow-sm ring-1 ring-black/5 backdrop-blur-md">
       <div className="container flex justify-between">
         <div>
           <a className="text-blue-600" href="#top">
@@ -42,7 +42,7 @@ const Hero = ({}) => {
           <div className=" absolute top-0 left-0 bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 opacity-[50%] h-[84%] w-[84%] rounded-full transform translate-x-8 translate-y-16 blur-sm animate-float-2"></div>
           <div className=" absolute top-0 left-0 bg-gradient-radial from-amber-500 via-yellow-200 to-lime-400 opacity-[50%] h-2/3 w-2/3 rounded-full transform translate-x-8 translate-y-16 blur-sm animate-float-3"></div>
         </div>
-        <div className="absolute top-[-50%] right-[11%] max-w-96">
+        <div className="absolute top-[-25%] right-[11%] max-w-96">
           <svg
             width="499"
             height="502"
@@ -133,16 +133,7 @@ const Hero = ({}) => {
           </svg>
         </div>
         <div className="container flex flex-col justify-center items-center relative z-50">
-          <div className="aspect-video rounded-3xl bg-white/10 shadow-xl ring-1 ring-black/5 px-10 py-12 flex items-center backdrop-blur-md relative max-w-[48rem]">
-            {/* <div className="absolute top-8 left-8 hidden md:block">
-            <div className="text-xs max-w-52 font-mono">
-              dont mind this, i'm just enjoying some time playing with color,
-              texture, and filters
-            </div>
-            <div className="font-extrabold text-6xl text-pink-500 absolute top-[-1.5rem] right-2 transform rotate-12">
-              *
-            </div>
-          </div> */}
+          <div className="aspect-video rounded-3xl bg-white/10 shadow-xl ring-1 ring-black/5 px-10 py-12 flex items-center backdrop-blur-lg relative max-w-[48rem] mt-32">
             <div className="flex flex-col items-center text-center">
               <h1 className="text-4xl md:text-5xl lg:text-8xl font-medium text-stone-800 z-40 uppercase font-hammersmith tracking-widest">
                 John
@@ -542,7 +533,7 @@ const Experience = ({}) => {
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out"
             href="https://ionic.io/"
             target="_blank"
           >
@@ -566,7 +557,7 @@ const Experience = ({}) => {
             <p>stenciljs.com</p>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-sm relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://capacitorjs.com/"
             target="_blank"
           >
@@ -574,7 +565,7 @@ const Experience = ({}) => {
             <p>capacitorjs.com</p>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-sm relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://ionic.io/appflow"
             target="_blank"
           >
@@ -582,7 +573,7 @@ const Experience = ({}) => {
             <p>ionic.io/appflow</p>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-sm relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.jabel.com/"
             target="_blank"
           >
@@ -590,7 +581,7 @@ const Experience = ({}) => {
             <p>jabel.com</p>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-sm relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.burdstudios.com/"
             target="_blank"
           >
@@ -598,7 +589,7 @@ const Experience = ({}) => {
             <p>burdstudios.com</p>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-sm relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.redtag.digital/"
             target="_blank"
           >
@@ -613,9 +604,12 @@ const Experience = ({}) => {
 
 const Footer = ({}) => {
   return (
-    <section className="px-4 py-[11rem] flex justify-center" id="connect">
+    <footer
+      className="px-4 py-[4rem] lg:py-[8rem] flex justify-center"
+      id="connect"
+    >
       <div className="container flex flex-col justify-center items-center text-center relative">
-        <div className="absolute bottom-[-80%] right-1/3">
+        <div className="absolute top-[-100%] right-1/4 md:right-1/3">
           <svg
             width="184"
             height="91"
@@ -710,6 +704,6 @@ const Footer = ({}) => {
           </svg>
         </a>
       </div>
-    </section>
+    </footer>
   );
 };
