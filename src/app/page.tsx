@@ -16,11 +16,11 @@ const Nav = ({}) => {
     <nav className="w-full flex justify-center fixed top-0 py-6 px-4 z-50 bg-white/10 shadow-sm ring-1 ring-black/5 backdrop-blur-md">
       <div className="container flex justify-between">
         <div>
-          <a className="text-blue-600" href="#top">
+          <a className="text-blue-700" href="#top">
             John
           </a>
         </div>
-        <div className="flex gap-4 text-blue-600">
+        <div className="flex gap-4 text-blue-700">
           <a href="#connect">connect</a>
           <a href="#experience">projects</a>
         </div>
@@ -144,12 +144,18 @@ const Hero = ({}) => {
                 technologies.
               </p>
               <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2">
-                <button className="bg-purple-500 text-stone-900 px-4 py-1 font-semibold rounded-full hover:bg-pink-500 transition ease-in-out">
-                  <a href="#experience">My projects</a>
-                </button>
-                <button className=" border-2 border-stone-700 text-stone-700 px-4 py-1 font-semibold rounded-full hover:border-gray-600 hover:text-gray-600 transition ease-in-out">
-                  <a href="#connect">Connect with me</a>
-                </button>
+                <a
+                  href="#experience"
+                  className="bg-purple-400 text-stone-900 px-4 py-1 font-semibold rounded-full hover:bg-pink-400 transition ease-in-out"
+                >
+                  My projects
+                </a>
+                <a
+                  href="#connect"
+                  className=" border-2 border-stone-700 text-stone-700 px-4 py-1 font-semibold rounded-full hover:border-gray-600 hover:text-gray-600 transition ease-in-out"
+                >
+                  Connect with me
+                </a>
               </div>
             </div>
           </div>
@@ -673,6 +679,7 @@ const Footer = ({}) => {
         <a
           href="https://www.linkedin.com/in/john-wheeler-5697431b9/"
           target="_blank"
+          aria-label="Link to John Wheeler's LinkedIn profile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
