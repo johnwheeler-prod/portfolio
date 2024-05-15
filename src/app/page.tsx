@@ -539,70 +539,120 @@ const Experience = ({}) => {
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out"
             href="https://ionic.io/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">ionic</h3>
             <p>ionic.io</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://ionicframework.com/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">ionic framework</h3>
             <p>ionicframework.com</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Full build</p>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://stenciljs.com/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">stencil</h3>
             <p>stenciljs.com</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Full build</p>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://capacitorjs.com/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">capacitor</h3>
             <p>capacitorjs.com</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://ionic.io/appflow"
             target="_blank"
           >
             <h3 className="font-medium text-lg">appflow</h3>
             <p>ionic.io/appflow</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.jabel.com/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">redtag digital</h3>
             <p>jabel.com</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Full build</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.burdstudios.com/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">self</h3>
             <p>burdstudios.com</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Full build</p>
+                <p className="text-sm font-light mt-1">Maintenance</p>
+                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+              </li>
+            </ul>
           </a>
           <a
-            className="border-2 border-blue-500 rounded-xl aspect-video bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
+            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
             href="https://www.redtag.digital/"
             target="_blank"
           >
             <h3 className="font-medium text-lg">redtag digital</h3>
             <p>redtag.digital</p>
+            <ul>
+              <li>
+                <p className="text-sm font-light mt-1">Full build</p>
+              </li>
+            </ul>
           </a>
         </div>
+
       </div>
     </section>
   );
