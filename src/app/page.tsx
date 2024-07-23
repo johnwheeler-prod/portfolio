@@ -1,4 +1,10 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Home() {
   return (
@@ -31,10 +37,7 @@ const Nav = ({}) => {
 
 const Hero = ({}) => {
   return (
-    <section
-      className="h-[86vh] flex items-center justify-center relative px-4 z-30"
-      id="top"
-    >
+    <section className="h-[86vh] flex items-center justify-center relative px-4 z-30" id="top">
       <div className="container relative">
         <div className="absolute left-[14%] top-[30%] h-96 w-96 z-10">
           <div className="absolute top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 h-full w-full opacity-[50%] rounded-full blur-sm animate-float"></div>
@@ -139,9 +142,8 @@ const Hero = ({}) => {
                 John
               </h1>
               <p className="text-gray-700 font-medium animate-fade-in">
-                I&apos;m an experienced software and web engineer with a passion
-                for implementing high quality designs using the latest frontend
-                technologies.
+                I&apos;m an experienced software and web engineer with a passion for implementing
+                high quality designs using the latest frontend technologies.
               </p>
               <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2">
                 <a
@@ -166,11 +168,76 @@ const Hero = ({}) => {
 };
 
 const Experience = ({}) => {
+  const experienceData = [
+    {
+      id: 0,
+      title: 'Ionic',
+      domain: 'ionic.io',
+      tags: ['Maintenance', 'Style and functionality upgrades'],
+      link: 'https://ionic.io/',
+    },
+    {
+      id: 1,
+      title: 'Ionic Framework',
+      domain: 'ionicframework.com',
+      tags: ['Full Build', 'Maintenance', 'Style and functionality upgrades'],
+      link: 'https://ionicframework.com/',
+    },
+    {
+      id: 2,
+      title: 'Stencil',
+      domain: 'stenciljs.com',
+      tags: ['Full Build', 'Maintenance', 'Style and functionality upgrades'],
+      link: 'https://stenciljs.com/',
+    },
+    {
+      id: 3,
+      title: 'Capacitor',
+      domain: 'capacitorjs.com',
+      tags: ['Maintenance', 'Style and functionality upgrades'],
+      link: 'https://ionicframework.com/',
+    },
+    {
+      id: 4,
+      title: 'Appflow',
+      domain: 'ionic.io/appflow',
+      tags: ['Maintenance', 'Style and functionality upgrades'],
+      link: 'https://ionic.io/appflow',
+    },
+    {
+      id: 5,
+      title: 'RedTag Digital',
+      domain: 'redtag.digital',
+      tags: ['Full Build'],
+      link: 'https://redtag.digital',
+    },
+    {
+      id: 6,
+      title: 'Self',
+      domain: 'burdstudios.com',
+      tags: ['Full Build', 'Maintenance', 'Style and functionality upgrades'],
+      link: 'https://burdstudios.com',
+    },
+    {
+      id: 7,
+      title: 'RedTag Digital',
+      domain: 'jabel.com',
+      tags: ['Full Build'],
+      link: 'https://jabel.com',
+    },
+  ];
+
+  // useGSAP(() => {
+  //   window.addEventListener('mousemove', (e) => {
+  //     gsap.to('.card-1', {
+  //       x: e.clientX,
+  //       ease: 'power1.out',
+  //     });
+  //   });
+  // });
+
   return (
-    <section
-      id="experience"
-      className="flex justify-center py-48 px-4 relative z-30"
-    >
+    <section id="experience" className="flex justify-center py-48 px-4 relative z-30">
       <div className="container relative">
         <div className="absolute left-[-10%] bottom-[-5%] sm:bottom-[-10%] md:bottom-[-20%] lg:bottom-[-40%] transform scale-75 rotate-3 z-0">
           <svg
@@ -220,11 +287,7 @@ const Experience = ({}) => {
               stroke="#06B6D4"
               stroke-width="2"
             />
-            <path
-              d="M280.429 1L280.429 217.49L280.429 400.304"
-              stroke="#06B6D4"
-              stroke-width="2"
-            />
+            <path d="M280.429 1L280.429 217.49L280.429 400.304" stroke="#06B6D4" stroke-width="2" />
             <path
               d="M227.909 2.13199C219.987 88.2983 220.355 135.825 227.909 219.471C231.685 290.056 231.473 331.868 227.909 401.436"
               stroke="#06B6D4"
@@ -531,128 +594,30 @@ const Experience = ({}) => {
         <header className="mb-12 relative z-10 max-w-[70%]">
           <h2 className="text-xl font-medium mb-2">Experience</h2>
           <p>
-            Some of my most notable experiences are laid out below in these
-            cards. From personal projects, to agency experience, to long term
-            maintenance of notable web properties from a reputable software
-            company, I&apos;ve done it all.
+            Some of my most notable experiences are laid out below in these cards. From personal
+            projects, to agency experience, to long term maintenance of notable web properties from
+            a reputable software company, I&apos;ve done it all.
           </p>
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out"
-            href="https://ionic.io/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">ionic</h3>
-            <p>ionic.io</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://ionicframework.com/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">ionic framework</h3>
-            <p>ionicframework.com</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Full build</p>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://stenciljs.com/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">stencil</h3>
-            <p>stenciljs.com</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Full build</p>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://capacitorjs.com/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">capacitor</h3>
-            <p>capacitorjs.com</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://ionic.io/appflow"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">appflow</h3>
-            <p>ionic.io/appflow</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://www.jabel.com/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">redtag digital</h3>
-            <p>jabel.com</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Full build</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://www.burdstudios.com/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">self</h3>
-            <p>burdstudios.com</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Full build</p>
-                <p className="text-sm font-light mt-1">Maintenance</p>
-                <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
-              </li>
-            </ul>
-          </a>
-          <a
-            className="border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-md relative hover:shadow-lg transition ease-in-out"
-            href="https://www.redtag.digital/"
-            target="_blank"
-          >
-            <h3 className="font-medium text-lg">redtag digital</h3>
-            <p>redtag.digital</p>
-            <ul>
-              <li>
-                <p className="text-sm font-light mt-1">Full build</p>
-              </li>
-            </ul>
-          </a>
+          {experienceData.map(({ id, title, domain, tags, link }) => (
+            <a
+              key={id}
+              className={`card-${id} border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out`}
+              href={link}
+              target="_blank"
+            >
+              <h3 className="font-medium text-lg lowercase">{title}</h3>
+              <p>{domain}</p>
+              <ul>
+                <li>
+                  <p className="text-sm font-light mt-1">Maintenance</p>
+                  <p className="text-sm font-light mt-1">Style and functionality upgrades</p>
+                </li>
+              </ul>
+            </a>
+          ))}
         </div>
-
       </div>
     </section>
   );
@@ -660,10 +625,7 @@ const Experience = ({}) => {
 
 const Footer = ({}) => {
   return (
-    <footer
-      className="px-4 py-[4rem] lg:py-[8rem] flex justify-center"
-      id="connect"
-    >
+    <footer className="px-4 py-[4rem] lg:py-[8rem] flex justify-center" id="connect">
       <div className="container flex flex-col justify-center items-center text-center relative">
         <div className="absolute top-[-100%] right-1/4 md:right-1/3">
           <svg
@@ -723,9 +685,7 @@ const Footer = ({}) => {
           </svg>
         </div>
         <h2 className="text-xl font-medium">Reach out</h2>
-        <p className="mb-4 lowerca">
-          Feel free to connect with me through linkedin
-        </p>
+        <p className="mb-4 lowerca">Feel free to connect with me through linkedin</p>
         <a
           href="https://www.linkedin.com/in/john-wheeler-5697431b9/"
           target="_blank"
