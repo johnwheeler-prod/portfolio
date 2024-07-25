@@ -2,10 +2,12 @@
 
 import Image from 'next/image';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import clsx from 'clsx';
 
 export default function Home() {
   return (
@@ -228,11 +230,18 @@ const Experience = ({}) => {
     },
   ];
 
-  useGSAP(() => {
+  const [tlFinished, setTlFinished] = useState(false);
+
+  const handleFinished = () => {
+    setTlFinished(true);
+  };
+
+  useGSAP(({ handleFinished }) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const expTl = gsap.timeline({
-      scrollTrigger: { trigger: '#experience', start: 'top center', markers: true },
+      scrollTrigger: { trigger: '#experience', start: 'top center' },
+      onComplete: handleFinished,
     });
 
     expTl.from('.h2', {
@@ -654,7 +663,12 @@ const Experience = ({}) => {
           {experienceData.map(({ id, title, domain, tags, link }) => (
             <a
               key={id}
-              className={`card-${id} border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg`}
+              className={clsx(
+                `card-${id} border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg`,
+                {
+                  'transition ease-in-out': tlFinished,
+                },
+              )}
               href={link}
               target="_blank"
             >
