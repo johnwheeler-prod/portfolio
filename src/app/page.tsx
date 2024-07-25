@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Home() {
   return (
@@ -227,20 +228,69 @@ const Experience = ({}) => {
     },
   ];
 
-  // useGSAP(() => {
-  //   window.addEventListener('mousemove', (e) => {
-  //     gsap.to('.card-1', {
-  //       x: e.clientX,
-  //       ease: 'power1.out',
-  //     });
-  //   });
-  // });
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const expTl = gsap.timeline({
+      scrollTrigger: { trigger: '#experience', start: 'top center', markers: true },
+    });
+
+    expTl.from('.h2', {
+      y: 100,
+      duration: 0.15,
+      autoAlpha: 0,
+      ease: 'power2.out',
+    });
+    expTl.from(
+      '.p',
+      {
+        y: 100,
+        duration: 0.15,
+        autoAlpha: 0,
+        ease: 'power2.out',
+      },
+      '<+=0.1',
+    );
+    for (let i = 0; i <= experienceData.length; i++) {
+      expTl.from(
+        `.card-${i}`,
+        {
+          y: 100,
+          duration: 0.3,
+          autoAlpha: 0,
+          ease: 'power2.out',
+        },
+        '<+=0.1',
+      );
+    }
+    expTl.from(
+      '.tube',
+      {
+        y: 50,
+        duration: 0.3,
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+      },
+      '<+=0.1',
+    );
+    expTl.from(
+      '.squiggle',
+      {
+        y: 50,
+        duration: 0.3,
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+      },
+      '<+=0.1',
+    );
+  });
 
   return (
     <section id="experience" className="flex justify-center py-48 px-4 relative z-30">
       <div className="container relative">
         <div className="absolute left-[-10%] bottom-[-5%] sm:bottom-[-10%] md:bottom-[-20%] lg:bottom-[-40%] transform scale-75 rotate-3 z-0">
           <svg
+            className="squiggle"
             width="402"
             height="403"
             viewBox="0 0 402 403"
@@ -347,6 +397,7 @@ const Experience = ({}) => {
         </div>
         <div className="absolute right-[-4%] top-[-10%] transform scale-75 z-0">
           <svg
+            className="tube"
             width="88"
             height="314"
             viewBox="0 0 88 314"
@@ -592,8 +643,8 @@ const Experience = ({}) => {
           </svg>
         </div>
         <header className="mb-12 relative z-10 max-w-[70%]">
-          <h2 className="text-xl font-medium mb-2">Experience</h2>
-          <p>
+          <h2 className="h2 text-xl font-medium mb-2">Experience</h2>
+          <p className="p">
             Some of my most notable experiences are laid out below in these cards. From personal
             projects, to agency experience, to long term maintenance of notable web properties from
             a reputable software company, I&apos;ve done it all.
@@ -603,7 +654,7 @@ const Experience = ({}) => {
           {experienceData.map(({ id, title, domain, tags, link }) => (
             <a
               key={id}
-              className={`card-${id} border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg transition ease-in-out`}
+              className={`card-${id} border-2 border-blue-500 rounded-xl bg-white/10 shadow-md ring-1 ring-black/5 px-10 py-12 backdrop-blur-lg relative hover:shadow-lg`}
               href={link}
               target="_blank"
             >
