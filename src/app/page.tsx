@@ -155,6 +155,18 @@ const Hero = ({}) => {
   );
 };
 
+const About = () => {
+  return (
+    <section id="about">
+      <div className="container">
+        <header>
+          <h1>About</h1>
+        </header>
+      </div>
+    </section>
+  );
+};
+
 const Experience = ({}) => {
   const experienceData = [
     {
