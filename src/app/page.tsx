@@ -17,6 +17,7 @@ export default function Home() {
     <main className="min-h-screen flex-col items-center justify-center bg-stone-200 overflow-hidden">
       <Nav />
       <Hero />
+      <WorkTogether />
       <Experience />
       <Footer />
     </main>
@@ -133,7 +134,7 @@ const Hero = ({}) => {
                 I&apos;m an experienced software and web engineer with a passion for implementing
                 high quality designs using the latest frontend technologies.
               </p>
-              <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2">
+              <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2 lowercase">
                 <a
                   href="#experience"
                   className="bg-purple-400 text-stone-900 px-4 py-1 font-semibold rounded-full hover:bg-pink-400 transition ease-in-out"
@@ -149,6 +150,32 @@ const Hero = ({}) => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WorkTogether = ({}) => {
+  return (
+    <section id="work-together" className="flex justify-center py-48 px-4 relative z-30">
+      <div className="container relative max-w-[42rem]">
+        <header className="flex flex-col justify-center text-center lowercase">
+          <h2 className="text-xl font-medium mb-2">Small Business Owner?</h2>
+          <p className="text-center">
+            If you own or operate a small business and are wondering if you could be getting more
+            our of SEO, feel free to reach out. I offer a pay what you can model to make sure that
+            small businesses thrive on the web.
+          </p>
+        </header>
+        <div className="flex flex-col md:flex-row gap-3 mt-4 animate-fade-in-2 items-center justify-center">
+          <p>Connect with me on linkedin so we can</p>
+          <a
+            href="#connect"
+            className=" border-2 border-stone-700 text-stone-700 px-4 py-1 font-semibold rounded-full hover:border-gray-600 hover:text-gray-600 transition ease-in-out"
+          >
+            Work together
+          </a>
         </div>
       </div>
     </section>
@@ -637,7 +664,7 @@ const Experience = ({}) => {
           </svg>
         </div>
         <header className="mb-12 relative z-10 max-w-[70%]">
-          <h2 className="h2 text-xl font-medium mb-2">Experience</h2>
+          <h2 className="h2 text-xl font-medium mb-2 lowercase">Experience</h2>
           <p className="p">
             Some of my most notable experiences are laid out below in these cards. From personal
             projects, to agency experience, to long term maintenance of notable web properties from
